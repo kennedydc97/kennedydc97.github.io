@@ -4,8 +4,9 @@
           <img width="100px" height="" src="../assets/logo.jpg" />
       </a>
   
-      <form class="d-flex mx-auto search-bar-class">
-        <input class="form-control me-2" matInput [(ngModel)]="searchBar" 
+      <form [formGroup]="formGroup" class="d-flex mx-auto search-bar-class">
+        <input class="form-control me-2" matInput
+        formControlName="searchBar"
         placeholder="O que você procura?" aria-label="Search">
         <button class="btn btn-outline-success" type="submit"><mat-icon class="mt-2">search</mat-icon></button>
       </form>
@@ -30,18 +31,18 @@
   
   <main>
     <div class="grid-container mt-3">
-      <mat-card class="grid-item mat-card" *ngFor="let item of items">
+      <mat-card class="grid-item mat-card" *ngFor="let item of filteredItemList">
         <div class="card-image-container">
           <img mat-card-image [src]="item.image" alt="{{ item.title }}">
         </div>
         <mat-card-content>
           <h5 mat-card-title>{{ item.title }}</h5>
           <p mat-card-text>
-            De: <s>R$9.99</s> <br />
-            <b style="font-size: large">Por: R$8.99</b>
+            De: <s>R${{item.fullPrice}}</s> <br />
+            <b style="font-size: large">Por: R${{item.discountPrice}}</b>
           </p>
         </mat-card-content>
-      </mat-card>    
+      </mat-card>
     </div>
   </main>
   

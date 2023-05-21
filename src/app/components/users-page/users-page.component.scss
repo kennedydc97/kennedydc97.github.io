@@ -1,0 +1,109 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 20px;
+  }
+  
+  mat-card img {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  // .mat-card {
+  //     background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('../assets/background.jpg');
+  // }
+  
+  .grid-item {
+    height: 100%;
+  }
+  
+  .card-image-container {
+    height: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card-image-container img {
+    max-height: 100%;
+    max-width: 100%;
+  }
+  
+  footer {
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+  }
+  
+  // .logo-class {
+  //     padding-left: 20%;
+  // }
+  
+  .search-bar-class {
+    padding-left: 10%;
+  }
+  
+  .route-class {
+    padding-left: 17%;
+    padding-right: 5%;
+    display: inline-block;
+  }
+  
+  .whats-app-icon {
+    bottom: 76px;
+    position: fixed;
+    right: 20px;
+    background-color: white;
+  }
+  
+  .whats-app-img {
+      width: 80px;
+      height: 80px;
+      border-radius: 30%;
+  }
+  
+  @media (max-width: 767px) {
+      .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .navbar .logo-class,
+      .navbar .search-bar-class,
+      .navbar .route-class {
+        margin-bottom: 10px;
+      }
+    
+      .route-class {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0%;
+      }
+      
+      .route-class div {
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+  
+      .grid-container {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 20px;
+          margin: 0 auto;
+          max-width: 1200px;
+          padding: 0 20px;
+        }
+    }
+  

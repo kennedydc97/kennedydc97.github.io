@@ -150,14 +150,9 @@ export class UsersPageComponent implements OnInit {
 
   constructor() {
     this.formGroup.controls.searchBar.valueChanges.subscribe(searchText => {
-      console.log(searchText)
-      
       if(searchText) {
         this.filteredItemList = this.itemList.filter((item: ItemModel) => {
-          if(item.title.toLowerCase().includes(searchText.toLowerCase())) {
-            return true
-          }
-          return false
+          return item.title.toLowerCase().includes(searchText.toLowerCase())
         })
       } else if (searchText?.length === 0){
         this.filteredItemList = this.itemList
